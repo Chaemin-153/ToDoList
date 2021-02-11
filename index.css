@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+body {
+	color: #2d3436;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-family: Roboto;
+	overflow-y: hidden;
+}
+
+.form,
+.greetings {
+	display: none;
+}
+
+.showing {
+	display: block;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.bgImage {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	/*height: 100%;*/
+	z-index: -1;
+	animation: fadeIn 2s linear;
+	padding-top: calc (300 / 1000 * 100);
+}
+
+@keyframes beat {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.js-clock:hover,
+.js-greetings:hover {
+	animation: beat 1s linear infinite;
+}
+
+.js-title {
+	font-size: 180px;
+	font-weight: 700;
+	margin-bottom: 0px;
+}
+
+.js-form {
+	padding: 30px 0px;
+}
+
+input {
+	border: none;
+	background-color: transparent;
+	/*color: white;*/
+	width: 300px;
+	height: 45px;
+	font-size: 30px;
+	border-bottom: 3px solid #2d3436;
+}
+
+.js-toDoForm input {
+	width: 250px;
+	height: 45px;
+}
+
+input::placeholder {
+	/*color: white;*/
+	font-size: 40px;
+}
+
+input:focus {
+	outline: none;
+}
+
+.greetings {
+	font-size: 50px;
+	font-weight: 500;
+}
+
+.js-weather {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	font-size: 40px;
+	font-weight: 500;
+}
+
+button {
+	background-color: transparent;
+	border: none;
+	font-size: 30px;
+}
+
+ul {
+	list-style: none;
+	padding-left: 0px;
+	padding-top: 5px;
+}
+
+.js-toDoList span,
+.js-myGoalList span {
+	font-size: 30px;
+	font-weight: 500;
+}
+
+.myGoalBox {
+	width: 350px;
+	height: 300px;
+	border: 2px solid #2d3436;
+	border-radius: 10%;
+	position: absolute;
+	left: 30px;
+	top: 30px;
+	padding: 20px;
+	background-color: #ecf2f2;
+	box-shadow: 0px 0px 10px 3px grey;
+}
