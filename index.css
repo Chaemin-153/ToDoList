@@ -67,6 +67,18 @@ body {
 	padding: 30px 0px;
 }
 
+.js-form input {
+	transition: all 0.3s ease-in-out;
+	text-align: center;
+}
+
+.js-form:focus-within input {
+	width: 370px;
+	border: 3px solid #2d3436;
+	border-radius: 20px;
+	padding: 8px;
+}
+
 input {
 	border: none;
 	background-color: transparent;
@@ -79,6 +91,15 @@ input {
 .js-toDoForm input {
 	width: 250px;
 	height: 45px;
+	transition: all 0.3s ease-in-out;
+	text-align: center;
+}
+
+.js-toDoForm:focus-within input {
+	width: 250px;
+	border: 3px solid #2d3436;
+	border-radius: 20px;
+	padding: 8px;
 }
 
 input::placeholder {
